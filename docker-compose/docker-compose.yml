@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  secureservice:
+    build:
+      context: ../
+      dockerfile: SecureSparkApp/Dockerfile
+    ports:
+      - "35000:6000"
+      
+  otherservice:
+    build:
+      context: ../OtherServiceArep
+      dockerfile: Dockerfile
+    ports:
+      - "36000:6000"
